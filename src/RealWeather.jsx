@@ -47,13 +47,11 @@ function RealWeather() {
   };
 
   const handleSubmit = async (event) => {
-    // if  {
-      (event.key === "submit")
-      event.preventDefault();
-      setInput("");
-      setWeather({ ...weather, loading: true });
-      const url = 'https://api.openweathermap.org/data/3.0/weather?';
-      const apiKey = '4bcf7f0814e79205596724bf3be99e37';
+    event.preventDefault();
+    setInput("");
+    setWeather({ ...weather, loading: true });
+    const url = 'https://api.openweathermap.org/data/2.5/weather';  
+    const apiKey = '4bcf7f0814e79205596724bf3be99e37';  
       // q=${input}&appid=${apiKey}
 
 
@@ -73,7 +71,6 @@ function RealWeather() {
           setInput("");
           console.log("error", error);
         });
-    // }
   };
 
   return (
